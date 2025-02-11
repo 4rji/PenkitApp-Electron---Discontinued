@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tools</title>
-  <link rel="stylesheet" href="../styles.css">
+  <title>OSCP</title>
+  
   <style>
-    @font-face {
-      font-family: 'Press Start 2P';
-      src: url('fonts/PressStart2P-Regular.ttf') format('truetype');
-    }
+    <style>
+        @font-face {
+            font-family: 'Press Start 2P';
+            src: url('fonts/PressStart2P-Regular.ttf') format('truetype');
+        }
 
-    @font-face {
-      font-family: 'Lexie Readable';
-      src: url('fonts/LexieReadable-Regular.ttf') format('truetype');
-    }
-
+        @font-face {
+            font-family: 'Lexie Readable';
+            src: url('fonts/LexieReadable-Regular.ttf') format('truetype');
+        }
     body {
       background-color: #0d1117;
       color: #33ff77;
-      font-family: 'Lexie Readable', sans-serif;
+      font-family: 'Courier New', monospace;
       text-align: center;
       margin: 0;
       padding: 20px;
@@ -46,51 +46,6 @@
       margin-bottom: 30px;
       cursor: pointer;
     }
-    .tags {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      margin-bottom: 30px;
-    }
-    .content {
-      text-align: left;
-      color: #88cc88;
-      line-height: 1.6;
-      font-size: 1.1rem;
-      margin-bottom: 40px;
-    }
-    .content p {
-      margin-bottom: 20px;
-    }
-    .subtitle {
-      color: #33ff77;
-      font-size: 1.2rem;
-      margin: 10px 0;
-    }
-    .highlight {
-      color: #88cc88;
-      font-size: 1.1rem;
-      margin: 15px 0;
-      font-style: italic;
-    }
-    .comment-box {
-      margin-top: 40px;
-      border: 4px double #33ff77;
-      padding: 20px;
-      border-radius: 10px;
-      background: rgba(51, 255, 119, 0.05);
-      text-align: left;
-    }
-    .comment-box h2 {
-      margin: 0 0 15px 0;
-      font-size: 1.5rem;
-      color: #33ff77;
-    }
-    .comment-box p {
-      margin: 0;
-      color: #88cc88;
-      font-size: 1.1rem;
-    }
     .back-button {
       display: inline-block;
       background: transparent;
@@ -102,10 +57,6 @@
       margin-top: 40px;
       font-size: 1.1rem;
       font-family: 'Press Start 2P', cursive;
-    }
-    .back-button:hover {
-      background: rgba(51, 255, 119, 0.1);
-      box-shadow: 0 0 20px rgba(51, 255, 119, 0.3);
     }
     /* Estilos para la ventana modal */
     .modal {
@@ -145,10 +96,25 @@
       border: none;
       background: #0d1117;
     }
+    /* Estilos adicionales para la documentación */
+    .subtitle {
+      color: #33ff77;
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+    
+    .highlight {
+      color: #88cc88;
+      font-size: 1.1rem;
+      margin: 15px 0;
+      font-style: italic;
+    }
+    
     h3, h4 {
       color: #33ff77;
       margin: 20px 0 10px 0;
     }
+    
     pre {
       background: #161b22;
       padding: 15px;
@@ -156,50 +122,95 @@
       overflow-x: auto;
       border: 1px solid rgba(51, 255, 119, 0.2);
     }
+    
     code {
       color: #88cc88;
       font-family: 'Courier New', monospace;
     }
+    
     .link a {
       color: #33ff77;
       text-decoration: none;
     }
+    
     .link a:hover {
       text-decoration: underline;
+    }
+
+    .tags {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 30px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Cont</h1>
+    <h1>OSCP</h1>
+    <div class="tags">
+      <div class="tag" onclick="openModal('OSCPtag')">OSCPtag</div>
+    </div>
     <div class="content">
-      <p>Hola, ejemplo.</p>
-      <p class="subtitle">Subtítulo</p>
-      <p class="highlight">Destacado</p>
+      <a href="#" class="back-button" onclick="goBack()">← Back</a>
     </div>
-    <div class="comment-box">
-      <h2>Tit</h2>
-      <p>Coment</p>
-    </div>
-    <pre><code>// Código
-function hi(){
-  console.log('Hi');
-}
-</code></pre>
-    <div class="link"><a href="#">Enlace</a></div>
- 
   </div>
-  <!-- Modal -->
-  <div class="modal" id="modal">
+
+  <!-- Modal Ligolo -->
+  <div id="OSCPtag" class="modal">
     <div class="modal-content">
-      <span class="close-button" id="closeButton">&times;</span>
-      <iframe src="about:blank" class="tool-frame"></iframe>
+      <span class="close-button" onclick="closeModal('OSCPtag')">×</span>
+      <iframe src="oscp/OSCPtag.html" class="tool-frame"></iframe>
     </div>
   </div>
+
+  <!-- Modal Template -->
+  <div id="templateModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal('templateModal')">×</span>
+      <iframe src="tools/template.html" class="tool-frame"></iframe>
+    </div>
+  </div>
+
+
+
   <script>
-    document.getElementById('closeButton').addEventListener('click', function() {
-      document.getElementById('modal').style.display = 'none';
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = 'block';
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = 'none';
+    }
+
+    function goBack() {
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        window.location.href = 'index.html';
+      }
+    }
+
+    // Manejar tecla retroceso (backspace)
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Backspace' && !e.target.matches('input, textarea')) {
+        goBack();
+      }
     });
+
+    // Manejar botón del mouse
+    window.addEventListener('mouseup', function(e) {
+      if (e.button === 3 || e.button === 8) { // 3 o 8 son los botones de retroceso típicos
+        goBack();
+      }
+    });
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('ligoloModal');
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
   </script>
 </body>
 </html>
