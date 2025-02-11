@@ -1,6 +1,7 @@
 # Archivos de configuración del entorno
 .env
 
+
 # Dependencias y paquetes
 node_modules/
 
@@ -16,3 +17,5 @@ build/
 # Configuraciones de IDE
 .vscode/
 .idea/
+
+package-lock.json
