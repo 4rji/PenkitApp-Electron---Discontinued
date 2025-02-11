@@ -1,205 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tools</title>
-  <link rel="stylesheet" href="../styles.css">
-  <style>
-    @font-face {
-      font-family: 'Press Start 2P';
-      src: url('fonts/PressStart2P-Regular.ttf') format('truetype');
-    }
-
-    @font-face {
-      font-family: 'Lexie Readable';
-      src: url('fonts/LexieReadable-Regular.ttf') format('truetype');
-    }
-
-    body {
-      background-color: #0d1117;
-      color: #33ff77;
-      font-family: 'Lexie Readable', sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-    }
-    h1 {
-      font-size: 4rem;
-      text-align: left;
-      margin-bottom: 40px;
-      color: #33ff77;
-      font-family: 'Press Start 2P', cursive;
-    }
-    .tag {
-      display: inline-block;
-      background: rgba(51, 255, 119, 0.1);
-      color: #33ff77;
-      padding: 5px 15px;
-      border-radius: 5px;
-      font-size: 0.9rem;
-      margin-bottom: 30px;
-      cursor: pointer;
-    }
-    .tags {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      margin-bottom: 30px;
-    }
-    .content {
-      text-align: left;
-      color: #88cc88;
-      line-height: 1.6;
-      font-size: 1.1rem;
-      margin-bottom: 40px;
-    }
-    .content p {
-      margin-bottom: 20px;
-    }
-    .subtitle {
-      color: #33ff77;
-      font-size: 1.2rem;
-      margin: 10px 0;
-    }
-    .highlight {
-      color: #88cc88;
-      font-size: 1.1rem;
-      margin: 15px 0;
-      font-style: italic;
-    }
-    .comment-box {
-      margin-top: 40px;
-      border: 4px double #33ff77;
-      padding: 20px;
-      border-radius: 10px;
-      background: rgba(51, 255, 119, 0.05);
-      text-align: left;
-    }
-    .comment-box h2 {
-      margin: 0 0 15px 0;
-      font-size: 1.5rem;
-      color: #33ff77;
-    }
-    .comment-box p {
-      margin: 0;
-      color: #88cc88;
-      font-size: 1.1rem;
-    }
-    .back-button {
-      display: inline-block;
-      background: transparent;
-      color: #33ff77;
-      padding: 10px 30px;
-      text-decoration: none;
-      border: 2px solid #33ff77;
-      transition: all 0.3s ease;
-      margin-top: 40px;
-      font-size: 1.1rem;
-      font-family: 'Press Start 2P', cursive;
-    }
-    .back-button:hover {
-      background: rgba(51, 255, 119, 0.1);
-      box-shadow: 0 0 20px rgba(51, 255, 119, 0.3);
-    }
-    /* Estilos para la ventana modal */
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #0d1117;
-      z-index: 1000;
-    }
-    .modal-content {
-      position: relative;
-      margin: 2% auto;
-      width: 90%;
-      height: 90vh;
-    }
-    .close-button {
-      position: absolute;
-      right: 20px;
-      top: -60px;
-      color: #33ff77;
-      font-size: 6rem;
-      cursor: pointer;
-      line-height: 1;
-      transition: all 0.3s ease;
-      z-index: 1001;
-    }
-    .close-button:hover {
-      color: #88cc88;
-      transform: scale(1.1);
-    }
-    .tool-frame {
-      width: 100%;
-      height: 100%;
-      border: none;
-      background: #0d1117;
-    }
-    h3, h4 {
-      color: #33ff77;
-      margin: 20px 0 10px 0;
-    }
-    pre {
-      background: #161b22;
-      padding: 15px;
-      border-radius: 5px;
-      overflow-x: auto;
-      border: 1px solid rgba(51, 255, 119, 0.2);
-    }
-    code {
-      color: #88cc88;
-      font-family: 'Courier New', monospace;
-    }
-    .link a {
-      color: #33ff77;
-      text-decoration: none;
-    }
-    .link a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxychains - PenKit Pro</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        @font-face {
+            font-family: 'Press Start 2P';
+            src: url('fonts/PressStart2P-Regular.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Lexie Readable';
+            src: url('fonts/LexieReadable-Regular.ttf') format('truetype');
+        }
+        body {
+            background-color: #0d1117;
+            color: #33ff77;
+            font-family: 'Lexie Readable', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        .category-info {
+            margin-bottom: 40px;
+        }
+        .category-title {
+            font-family: 'Press Start 2P', cursive;
+            color: #33ff77;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        .category-description {
+            color: #88cc88;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            font-family: 'Lexie Readable', sans-serif;
+        }
+        .steps {
+            list-style: none;
+            padding: 0;
+        }
+        .step {
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .step-number {
+            color: #33ff77;
+            font-size: 1.3rem;
+            margin-right: 10px;
+            font-family: 'Courier New', monospace;
+        }
+        .step-title {
+            color: #33ff77;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            font-family: 'Courier New', monospace;
+        }
+        .step-content {
+            background: #0d1117;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #33ff77;
+            font-family: 'Lexie Readable', sans-serif;
+        }
+        .terminal {
+            background-color: #000;
+            color: #fff;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 10px;
+            font-family: 'Courier New', monospace;
+            border: 1px solid #33ff77;
+        }
+        .command {
+            color: #00ff00;
+        }
+        .comment {
+            color: #ffff00;
+        }
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+        a {
+            color: #33ff77;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Cont</h1>
-    <div class="content">
-      <p>Hola, ejemplo.</p>
-      <p class="subtitle">Subtítulo</p>
-      <p class="highlight">Destacado</p>
+    <div class="container">
+        <!-- Category Info -->
+        <div class="category-info">
+            <h3 class="category-title">Surf in Stealth Mode: Unlock the Power of Proxychains!</h3>
+            <h4 class="category-description">
+                Proxychains es una herramienta para enrutar tu tráfico a través de una serie de servidores proxy,
+                brindando anonimato adicional y la capacidad de eludir restricciones de red. Ideal para pentesters
+                y entusiastas de la privacidad que buscan ocultar su actividad online.
+            </h4>
+        </div>
+        
+        <!-- Steps -->
+        <ul class="steps">
+            <li class="step">
+                <span class="step-number">1</span>
+                <h4 class="step-title">Modifica la configuración para modo dinámico y agrega los proxies</h4>
+                <div class="step-content">
+                    <div class="terminal">
+<pre><span class="command">sudo nano /etc/proxychains.conf</span>
+
+<span class="comment">#uncomment only
+
+random_chain
+# Proxy DNS requests - no leak for DNS data
+proxy_dns
+
+# Some timeouts in milliseconds
+tcp_read_time_out 15000
+tcp_connect_time_out 8000
+
+#add squid servers:
+http 192.168.88.83 3128
+http 192.168.2.2 3128
+
+#add some ssh -d 1080 servers
+socks4 192.168.88.83 1080
+socks4 192.168.200.228 1080</span>
+</pre>
+                    </div>
+                </div>
+            </li>
+
+            <li class="step">
+                <span class="step-number">2</span>
+                <h4 class="step-title">Desplegar rápidamente un servidor Squid para probar</h4>
+                <div class="step-content">
+                    <div class="terminal">
+<pre><span class="command">squidinst
+
+_________________________________________________________</span>
+
+<span class="comment">Where do you want to install?
+1 - Docker
+2 - APT
+3 - Stop,rm y restart squid container
+
+(1, 2 o 3): 1
+dpkg-query: no packages found matching docker.io
+Instalando el paquete docker.io...
+
+#Just follow my script</span>
+</pre>
+                    </div>
+                </div>
+            </li>
+
+            <li class="step">
+                <span class="step-number">3</span>
+                <h4 class="step-title">¡Listo!</h4>
+                <div class="step-content">
+                    <div class="terminal">
+<pre><span class="command">curl ifconfig.me
+191.29.17.113%</span>
+
+<span class="comment">proxychains curl ifconfig.me
+[proxychains] config file found: /etc/proxychains.conf
+[proxychains] preloading /usr/lib/x86_64-linux-gnu/libproxychains.so.4
+[proxychains] DLL init: proxychains-ng 4.17
+[proxychains] Random chain  ...  192.168.2.2:3128  ...  ifconfig.me:80  ...  OK
+41.72.11.314%
+
+#our IP changed.</span>
+</pre>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
-    <div class="comment-box">
-      <h2>Tit</h2>
-      <p>Coment</p>
-    </div>
-    <pre><code>// Código
-function hi(){
-  console.log('Hi');
-}
-</code></pre>
-    <div class="link"><a href="#">Enlace</a></div>
- 
-  </div>
-  <!-- Modal -->
-  <div class="modal" id="modal">
-    <div class="modal-content">
-      <span class="close-button" id="closeButton">&times;</span>
-      <iframe src="about:blank" class="tool-frame"></iframe>
-    </div>
-  </div>
-  <script>
-    document.getElementById('closeButton').addEventListener('click', function() {
-      document.getElementById('modal').style.display = 'none';
-    });
-  </script>
 </body>
 </html>
