@@ -5,12 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proxychains - PenKitas Pro</title>
     <link rel="stylesheet" href="../styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lexie+Readable:wght@400&display=swap" rel="stylesheet">
     <style>
+        @font-face {
+            font-family: 'Press Start 2P';
+            src: url('fonts/PressStart2P-Regular.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Lexie Readable';
+            src: url('fonts/LexieReadable-Regular.ttf') format('truetype');
+        }
+
         body {
             background-color: #0d1117;
             color: #c9d1d9;
-            font-family: 'Courier New', monospace;
+            font-family: 'Lexie Readable', sans-serif;
             margin: 0;
             padding: 20px;
         }
@@ -25,7 +34,7 @@
             color: #33ff77;
             font-size: 2rem;
             margin-bottom: 20px;
-            font-family: 'Courier New', monospace;
+            font-family: 'Press Start 2P', cursive;
         }
         .category-description {
             color: #8b949e;
@@ -45,13 +54,13 @@
             color: #33ff77;
             font-size: 1.5rem;
             margin-right: 15px;
-            font-family: 'Courier New', monospace;
+            font-family: 'Lexie Readable', sans-serif;
         }
         .step-title {
             color: #33ff77;
             font-size: 1.3rem;
             margin-bottom: 15px;
-            font-family: 'Courier New', monospace;
+            font-family: 'Lexie Readable', sans-serif;
         }
         .step-content {
             background: #161b22;
@@ -65,7 +74,7 @@
             padding: 15px;
             border-radius: 6px;
             margin-top: 10px;
-            font-family: 'Courier New', monospace;
+            font-family: 'Lexie Readable', sans-serif;
         }
         .command {
             color: #33ff77;
@@ -77,7 +86,49 @@
             margin: 0;
             white-space: pre-wrap;
         }
+        .modal {
+            display: none; /* Oculto por defecto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+        }
+        .modal-content {
+            position: relative;
+            margin: 5% auto;
+            width: 80%;
+            max-width: 600px;
+            background: #0d1117;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .close-button {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            color: #33ff77;
+            font-size: 2rem;
+            cursor: pointer;
+        }
     </style>
+    <script>
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'none'; // Oculta el modal
+            }
+        }
+
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'block'; // Muestra el modal
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -91,7 +142,7 @@
         <ul class="steps">
             <li class="step">
                 <span class="step-number">1</span>
-                <h4 class="step-title">Modify the configuration for dinamic and add the proxys</h4>
+                <h4 class="step-title">Modify the configuration for dynamic and add the proxies</h4>
                 <div class="step-content">
                     <div class="terminal">
                         <pre><span class="command">sudo nano /etc/proxychains.conf</span>
@@ -129,7 +180,7 @@ _________________________________________________________</span>
 <span class="comment">Where do you want to install?
 1 - Docker
 2 - APT
-3 - Stop,rm y restart squid container
+3 - Stop, rm y restart squid container
 
 (1, 2 o 3): 1
 dpkg-query: no packages found matching docker.io
@@ -155,11 +206,13 @@ Instalando el paquete docker.io...</span>
 [proxychains] Random chain  ...  192.168.2.2:3128  ...  ifconfig.me:80  ...  OK
 41.72.11.314%</span>
 
-<span class="comment">#our Ip change.</span></pre>
+<span class="comment">#our IP change.</span></pre>
                     </div>
                 </div>
             </li>
         </ul>
+    </div>
+   
     </div>
 </body>
 </html> 
