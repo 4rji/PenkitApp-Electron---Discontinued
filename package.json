@@ -1,9 +1,9 @@
 {
-  "name": "penkitas-pro",
+  "name": "4rji",
   "version": "1.0.0",
-  "description": "PenKitas Pro - Herramientas de Pentesting",
+  "description": "4rji - Herramientas de Pentesting",
   "main": "main.js",
-  "homepage": "https://penkitaspro.com",
+  "homepage": "https://4rji.com",
   "scripts": {
     "start": "electron .",
     "dev": "NODE_ENV=development electron .",
@@ -18,7 +18,7 @@
     "electron-reloader": "^1.2.3"
   },
   "build": {
-    "appId": "com.penkitaspro.app",
+    "appId": "com.4rji.app",
     "mac": {
       "category": "public.app-category.developer-tools",
       "icon": "build/icon.png",
@@ -46,7 +46,7 @@
       "icon": "build/icon.png",
       "category": "Development",
       "maintainer": "Tu Nombre",
-      "vendor": "PenKitas Pro",
+      "vendor": "4rji",
       "synopsis": "Herramientas de Pentesting",
       "description": "Suite de herramientas para pentesting y seguridad informática"
     }
