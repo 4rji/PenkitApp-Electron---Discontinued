@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guides </title>
+  <style>
+    body {
+      background-color: #0d1117;
+      color: #33ff77;
+      font-family: 'Courier New', monospace;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 4rem;
+      text-align: left;
+      margin-bottom: 40px;
+      color: #33ff77;
+    }
+    .tag {
+      display: inline-block;
+      background: rgba(51, 255, 119, 0.1);
+      color: #33ff77;
+      padding: 5px 15px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      margin-bottom: 30px;
+      cursor: pointer;
+    }
+    .back-button {
+      display: inline-block;
+      background: transparent;
+      color: #33ff77;
+      padding: 10px 30px;
+      text-decoration: none;
+      border: 2px solid #33ff77;
+      transition: all 0.3s ease;
+      margin-top: 40px;
+      font-size: 1.1rem;
+    }
+    /* Estilos para la ventana modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0d1117;
+      z-index: 1000;
+    }
+    .modal-content {
+      position: relative;
+      margin: 2% auto;
+      width: 90%;
+      height: 90vh;
+    }
+    .close-button {
+      position: absolute;
+      right: 20px;
+      top: -60px;
+      color: #33ff77;
+      font-size: 6rem;
+      cursor: pointer;
+      line-height: 1;
+      transition: all 0.3s ease;
+      z-index: 1001;
+    }
+    .close-button:hover {
+      color: #88cc88;
+      transform: scale(1.1);
+    }
+    .tool-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #0d1117;
+    }
+    /* Estilos adicionales para la documentación */
+    .subtitle {
+      color: #33ff77;
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+    
+    .highlight {
+      color: #88cc88;
+      font-size: 1.1rem;
+      margin: 15px 0;
+      font-style: italic;
+    }
+    
+    h3, h4 {
+      color: #33ff77;
+      margin: 20px 0 10px 0;
+    }
+    
+    pre {
+      background: #161b22;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+      border: 1px solid rgba(51, 255, 119, 0.2);
+    }
+    
+    code {
+      color: #88cc88;
+      font-family: 'Courier New', monospace;
+    }
+    
+    .link a {
+      color: #33ff77;
+      text-decoration: none;
+    }
+    
+    .link a:hover {
+      text-decoration: underline;
+    }
+
+    .tags {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Guides</h1>
+    <div class="tags">
+    </div>
+    <div class="content">
+      <a href="#" class="back-button" onclick="goBack()">← Back</a>
+    </div>
+  </div>
+
+
+  <script>
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = 'block';
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = 'none';
+    }
+
+    function goBack() {
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        window.location.href = 'index.html';
+      }
+    }
+
+    // Manejar tecla retroceso (backspace)
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Backspace' && !e.target.matches('input, textarea')) {
+        goBack();
+      }
+    });
+
+    // Manejar botón del mouse
+    window.addEventListener('mouseup', function(e) {
+      if (e.button === 3 || e.button === 8) { // 3 o 8 son los botones de retroceso típicos
+        goBack();
+      }
+    });
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('ligoloModal');
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>

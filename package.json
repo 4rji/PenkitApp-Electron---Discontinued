@@ -1,0 +1,54 @@
+{
+  "name": "penkitas-pro",
+  "version": "1.0.0",
+  "description": "PenKitas Pro - Herramientas de Pentesting",
+  "main": "main.js",
+  "homepage": "https://penkitaspro.com",
+  "scripts": {
+    "start": "electron .",
+    "dev": "NODE_ENV=development electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "electron-builder"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.3.3",
+    "electron-builder": "^25.1.8",
+    "electron-reloader": "^1.2.3"
+  },
+  "build": {
+    "appId": "com.penkitaspro.app",
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "icon": "build/icon.png",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["arm64"]
+        }
+      ]
+    },
+    "win": {
+      "icon": "build/icon.ico"
+    },
+    "linux": {
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": ["x64", "arm64"]
+        },
+        {
+          "target": "deb",
+          "arch": ["x64", "arm64"]
+        }
+      ],
+      "icon": "build/icon.png",
+      "category": "Development",
+      "maintainer": "Tu Nombre",
+      "vendor": "PenKitas Pro",
+      "synopsis": "Herramientas de Pentesting",
+      "description": "Suite de herramientas para pentesting y seguridad informática"
+    }
+  }
+}

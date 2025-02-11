@@ -1,0 +1,18 @@
+# Archivos de configuración del entorno
+.env
+
+# Dependencias y paquetes
+node_modules/
+
+# Archivos de compilación
+dist/
+build/
+
+# Archivos temporales y de caché
+*.log
+*.tmp
+.DS_Store
+
+# Configuraciones de IDE
+.vscode/
+.idea/

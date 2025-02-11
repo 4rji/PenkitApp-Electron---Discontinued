@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxychains - PenKitas Pro</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexie+Readable:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        .category-info {
+            margin-bottom: 40px;
+        }
+        .category-title {
+            color: #33ff77;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-family: 'Courier New', monospace;
+        }
+        .category-description {
+            color: #8b949e;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            font-family: 'Lexie Readable', sans-serif;
+        }
+        .steps {
+            list-style: none;
+            padding: 0;
+        }
+        .step {
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .step-number {
+            color: #33ff77;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            font-family: 'Courier New', monospace;
+        }
+        .step-title {
+            color: #33ff77;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-family: 'Courier New', monospace;
+        }
+        .step-content {
+            background: #161b22;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #30363d;
+            font-family: 'Lexie Readable', sans-serif;
+        }
+        .terminal {
+            background-color: #0d1117;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 10px;
+            font-family: 'Courier New', monospace;
+        }
+        .command {
+            color: #33ff77;
+        }
+        .comment {
+            color: #8b949e;
+        }
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Category Info -->
+        <div class="category-info">
+            <h3 class="category-title">Surf in Stealth Mode: Unlock the Power of Proxychains!</h3>
+            <h4 class="category-description">Proxychains is a tool for routing your internet traffic through a series of proxy servers, providing an additional layer of anonymity and the ability to bypass network restrictions. Ideal for pentesters and privacy enthusiasts looking to mask their online activities.</h4>
+        </div>
+        
+        <!-- Steps -->
+        <ul class="steps">
+            <li class="step">
+                <span class="step-number">1</span>
+                <h4 class="step-title">Modify the configuration for dinamic and add the proxys</h4>
+                <div class="step-content">
+                    <div class="terminal">
+                        <pre><span class="command">sudo nano /etc/proxychains.conf</span>
+
+<span class="comment">#uncomment only
+
+random_chain
+# Proxy DNS requests - no leak for DNS data
+proxy_dns
+
+# Some timeouts in milliseconds
+tcp_read_time_out 15000
+tcp_connect_time_out 8000
+
+#add squid servers:
+http 192.168.88.83 3128
+http 192.168.2.2 3128
+
+#add some ssh -d 1080 servers
+socks4 192.168.88.83 1080
+socks4 192.168.200.228 1080</span></pre>
+                    </div>
+                </div>
+            </li>
+
+            <li class="step">
+                <span class="step-number">2</span>
+                <h4 class="step-title">I'm going to quickly deploy a squid server to test</h4>
+                <div class="step-content">
+                    <div class="terminal">
+                        <pre><span class="command">squidinst
+
+_________________________________________________________</span>
+
+<span class="comment">Where do you want to install?
+1 - Docker
+2 - APT
+3 - Stop,rm y restart squid container
+
+(1, 2 o 3): 1
+dpkg-query: no packages found matching docker.io
+Instalando el paquete docker.io...</span>
+
+<span class="comment">#Just follow my script</span></pre>
+                    </div>
+                </div>
+            </li>
+
+            <li class="step">
+                <span class="step-number">3</span>
+                <h4 class="step-title">Let's go</h4>
+                <div class="step-content">
+                    <div class="terminal">
+                        <pre><span class="command">curl ifconfig.me
+191.29.17.113%</span>
+
+<span class="comment">proxychains curl ifconfig.me
+[proxychains] config file found: /etc/proxychains.conf
+[proxychains] preloading /usr/lib/x86_64-linux-gnu/libproxychains.so.4
+[proxychains] DLL init: proxychains-ng 4.17
+[proxychains] Random chain  ...  192.168.2.2:3128  ...  ifconfig.me:80  ...  OK
+41.72.11.314%</span>
+
+<span class="comment">#our Ip change.</span></pre>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html> 
