@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ligolo Documentation</title>
+     <link rel="stylesheet" href="../styles.css">
+   <link rel="stylesheet" href="styles-good.css">
+</head>
+<script>
+    function closeWindow() {
+        if (window.history.length > 1) {
+            window.history.back();
+        } else {
+            window.close();
+        }
+    }
+</script>
+
+<body>
+    
+<span class="close-button2" onclick="closeWindow()">←</span>
+    <div class="content-wrapper">
+        <div class="documentation">
+            <!-- Category Info -->
+            <div class="category-info" id="static-steps">
+                <h1>iperf3 Speed Test</h1>
+                <div class="content">
+                    <p>Context</p>
+                    <p class="subtitle">This script performs a speed test using iperf3, measuring both upload and download speeds to a specified server.</p>
+                    
+                    <div class="step-content">
+                        <div class="terminal">
+                            <pre><span class="command">Usage: veloint [SERVER_IP]</span></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="comment-box">
+                        <h2>Functionality</h2>
+                        <div class="step-content">
+                            <div class="terminal">
+                                <pre><span class="command">
+1. Prompts the user to start the test.
+2. Runs an upload test to the specified server.
+3. Runs a download test using the --reverse flag.
+4. Extracts the bitrate from the results.
+5. Displays a summary of upload and download speeds.</span></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment-box">
+                        <h2>Example Output</h2>
+                        <div class="step-content">
+                            <div class="terminal">
+                                <pre><span class="command">
+Upload Test:
+  Bitrate (sender):   850 Mbps
+  Bitrate (receiver): 840 Mbps
+
+Download Test:
+  Bitrate (sender):   900 Mbps
+  Bitrate (receiver): 890 Mbps
+                                </span></pre>
+                            </div>
+                        </div>
+                    </div>
+<!-- Imagen start -->
+
+<div class="category-info " id="image-steps">
+    <h3 class="category-title"></h3>
+</div>
+<!-- End of Category Info -->
+<!-- Image Display -->
+<div style="width: 80%; max-width: 1800px; overflow: hidden;">
+    <img src="img/iperf3/a.png" style="width: 100%; height: auto;" alt="">
+</div>
+
+<!-- Imagen END -->
+
+                    <div class="comment-box">
+                        <h2>Requirements</h2>
+                        <div class="step-content">
+                            <div class="terminal">
+                                <pre><span class="command">
+Ensure that iperf3 is installed on your system. If not, install it using:
+
+sudo apt install iperf3   # Debian/Ubuntu
+brew install iperf3       # macOS
+sudo dnf install iperf3   # Fedora
+                                </span></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment-box">
+                        <h2>Notes</h2>
+                        <div class="step-content">
+                            <div class="terminal">
+                                <pre><span class="command">
+If you experience connection issues, ensure that the specified server is running an iperf3 instance in server mode.
+                                </span></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -5,115 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ligolo Documentation</title>
     <link rel="stylesheet" href="../styles.css">
-    <style>
-        @font-face {
-            font-family: 'Press Start 2P';
-            src: url('fonts/PressStart2P-Regular.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-family: 'Lexie Readable';
-            src: url('fonts/LexieReadable-Regular.ttf') format('truetype');
-        }
-
-        body {
-            background-color: #0d1117;
-            color: #33ff77;
-            font-family: 'Lexie Readable', sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-        .content-wrapper {
-            width: 80%;
-            margin: 0 auto;
-        }
-        .documentation {
-            border: 4px double #33ff77;
-            padding: 30px;
-            border-radius: 10px;
-            background: #0d1117;
-            text-align: left;
-        }
-        /* Estilos para categorías */
-        .category-info {
-            margin-bottom: 30px;
-        }
-        .category-title {
-            color: #33ff77;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            font-family: 'Courier New', monospace;
-        }
-        .category-description {
-            color: #88cc88;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            font-family: 'Lexie Readable', sans-serif;
-        }
-        /* Estilos para pasos */
-        .steps {
-            list-style: none;
-            padding: 0;
-        }
-        .step {
-            margin-bottom: 30px;
-            position: relative;
-        }
-        .step-number {
-            color: #33ff77;
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-right: 10px;
-            font-family: 'Courier New', monospace;
-        }
-        .step-title {
-            color: #33ff77;
-            font-size: 1.3rem;
-            margin: 10px 0;
-            font-family: 'Courier New', monospace;
-        }
-        /* Terminal */
-        .terminal {
-            background-color: #000;
-            color: #ffffff;
-            font-family: 'Courier New', monospace;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-            border: 1px solid #33ff77;
-        }
-        .terminal pre {
-            margin: 0;
-            white-space: pre-wrap;
-        }
-        .command {
-            color: #00ff00;
-        }
-        .comment {
-            color: #ffff00;
-        }
-        /* Divisor */
-        .step-divider {
-            border: 0;
-            border-top: 1px solid #33ff77;
-            margin: 30px 0;
-        }
-        /* Enlaces */
-        a {
-            color: #33ff77;
-            text-decoration: none;
-            font-family: 'Lexie Readable', sans-serif;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .category-subtitle {
-            color: #33ff77;
-            font-family: 'Courier New', monospace;
-        }
-    </style>
+   <link rel="stylesheet" href="styles2.css">
 </head>
+<script>
+    function closeWindow() {
+        if (window.history.length > 1) {
+            window.history.back();
+        } else {
+            window.close();
+        }
+    }
+</script>
 <body>
+
+
+
+            <!-- Blank Space -->
+                        <p></p><p></p>
+                        <br>
+                        <p></p><p></p>
+                        <br>
+                        <p></p><p></p>
+                   
+                        
+            <!-- Blank Space -->
+
+
+
+
+<span class="close-button" onclick="closeWindow()">←</span>
     <div class="content-wrapper">
         <div class="documentation">
             <!-- Category Info -->
@@ -501,4 +421,5 @@ Expect: 100-continue
         </div>
     </div>
 </body>
+
 </html> 

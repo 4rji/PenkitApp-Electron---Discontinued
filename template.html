@@ -1,178 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tools</title>
-  <link rel="stylesheet" href="../styles.css">
-  <style>
-    @font-face {
-      font-family: 'Press Start 2P';
-      src: url('fonts/PressStart2P-Regular.ttf') format('truetype');
-    }
-
-    @font-face {
-      font-family: 'Lexie Readable';
-      src: url('fonts/LexieReadable-Regular.ttf') format('truetype');
-    }
-
-    body {
-      background-color: #0d1117;
-      color: #33ff77;
-      font-family: 'Lexie Readable', sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-    }
-    h1 {
-      font-size: 4rem;
-      text-align: left;
-      margin-bottom: 40px;
-      color: #33ff77;
-      font-family: 'Press Start 2P', cursive;
-    }
-    .tag {
-      display: inline-block;
-      background: rgba(51, 255, 119, 0.1);
-      color: #33ff77;
-      padding: 5px 15px;
-      border-radius: 5px;
-      font-size: 0.9rem;
-      margin-bottom: 30px;
-      cursor: pointer;
-    }
-    .tags {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      margin-bottom: 30px;
-    }
-    .content {
-      text-align: left;
-      color: #88cc88;
-      line-height: 1.6;
-      font-size: 1.1rem;
-      margin-bottom: 40px;
-    }
-    .content p {
-      margin-bottom: 20px;
-    }
-    .subtitle {
-      color: #33ff77;
-      font-size: 1.2rem;
-      margin: 10px 0;
-    }
-    .highlight {
-      color: #88cc88;
-      font-size: 1.1rem;
-      margin: 15px 0;
-      font-style: italic;
-    }
-    .comment-box {
-      margin-top: 40px;
-      border: 4px double #33ff77;
-      padding: 20px;
-      border-radius: 10px;
-      background: rgba(51, 255, 119, 0.05);
-      text-align: left;
-    }
-    .comment-box h2 {
-      margin: 0 0 15px 0;
-      font-size: 1.5rem;
-      color: #33ff77;
-    }
-    .comment-box p {
-      margin: 0;
-      color: #88cc88;
-      font-size: 1.1rem;
-    }
-    
-    /* Estilos para la ventana modal */
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #0d1117;
-      z-index: 1000;
-    }
-    .modal-content {
-      position: relative;
-      margin: 2% auto;
-      width: 90%;
-      height: 90vh;
-    }
-    .close-button {
-      position: absolute;
-      right: 20px;
-      top: -60px;
-      color: #33ff77;
-      font-size: 6rem;
-      cursor: pointer;
-      line-height: 1;
-      transition: all 0.3s ease;
-      z-index: 1001;
-    }
-    .close-button:hover {
-      color: #88cc88;
-      transform: scale(1.1);
-    }
-    .tool-frame {
-      width: 100%;
-      height: 100%;
-      border: none;
-      background: #0d1117;
-    }
-    h3, h4 {
-      color: #33ff77;
-      margin: 20px 0 10px 0;
-    }
-    pre {
-      background: #161b22;
-      padding: 15px;
-      border-radius: 5px;
-      overflow-x: auto;
-      border: 1px solid rgba(51, 255, 119, 0.2);
-    }
-    code {
-      color: #88cc88;
-      font-family: 'Courier New', monospace;
-    }
-    .link a {
-      color: #33ff77;
-      text-decoration: none;
-    }
-    .link a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ligolo Documentation</title>
+     <link rel="stylesheet" href="../styles.css">
+   <link rel="stylesheet" href="styles-good.css">
 </head>
+<script>
+    function closeWindow() {
+        if (window.history.length > 1) {
+            window.history.back();
+        } else {
+            window.close();
+        }
+    }
+</script>
+
 <body>
-  <div class="container">
-    <h1>Cont</h1>
+    
+<span class="close-button2" onclick="closeWindow()">←</span>
+    <div class="content-wrapper">
+        <div class="documentation">
+
+            <!-- Start here -->
+
+<span class="close-button" onclick="closeWindow()">←</span>
+    <div class="content-wrapper">
+        <div class="documentation">
+            <!-- Category Info -->
+            <div class="category-info" id="statci-steps">
+
+    <h1>TITLE</h1>
     <div class="content">
-      <p>Hola, ejemplo.</p>
-      <p class="subtitle">Subtítulo</p>
-      <p class="highlight">Destacado</p>
+      
+      <p class="subtitle">Subtitle</p>
+       <div class="step-content">
+                        <div class="terminal">
+                            <pre><span class="command">Content</span>
     </div>
     <div class="comment-box">
-      <h2>Tit</h2>
-      <p>Coment</p>
+      <h2>Script</h2>
+       <div class="step-content">
+                        <div class="terminal">
+                            <pre><span class="command">ContentScript</span>
     </div>
-    <pre><code>// Código
-function hi(){
-  console.log('Hi');
-}
-</code></pre>
-    <div class="link"><a href="#">Enlace</a></div>
- 
+    
+    <div class="link"><a href="#">Link</a></div>
   </div>
   <!-- Modal -->
   <div class="modal" id="modal">

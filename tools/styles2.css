@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('fonts/PressStart2P-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lexie Readable';
+    src: url('fonts/LexieReadable-Regular.ttf') format('truetype');
+}
+
+body {
+    background-color: #0d1117;
+    color: #33ff77;
+    font-family: 'Lexie Readable', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.category-info {
+    margin-bottom: 40px;
+}
+
+.category-title {
+    font-family: 'Press Start 2P', cursive;
+    color: #33ff77;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.category-description {
+    color: #88cc88;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-family: 'Lexie Readable', sans-serif;
+}
+
+.steps {
+    list-style: none;
+    padding: 0;
+}
+
+.step {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.step-number {
+    color: #33ff77;
+    font-size: 1.3rem;
+    margin-right: 10px;
+    font-family: 'Courier New', monospace;
+}
+
+.step-title {
+    color: #33ff77;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-family: 'Courier New', monospace;
+}
+
+.step-content {
+    background: #0d1117;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #33ff77;
+    font-family: 'Lexie Readable', sans-serif;
+}
+
+.terminal {
+    background-color: #000;
+    color: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-family: 'Courier New', monospace;
+    border: 1px solid #33ff77;
+}
+
+.command {
+    color: #00ff00;
+}
+
+.comment {
+    color: #ffff00;
+}
+
+pre {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+a {
+    color: #33ff77;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 3rem;
+    color: #33ff77;
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
