@@ -13,25 +13,53 @@
       <div class="tag" onclick="openModal('ligoloModal')">Ligolo</div>
       <div class="tag" onclick="openModal('proxychainsModal')">Proxychains</div>
       <div class="tag" onclick="openModal('iperf3Modal')">iperf3</div>
+
+
+
+
+
+
+      <!-- Herramienta nueva abajo  -->
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- NUEVA HERRAMIENTA arriba  -->
+
+
+
+
     </div>
     <div class="content">
       <a href="#" class="back-button" onclick="goBack()">← Back</a>
     </div>
   </div>
 
-    <!-- Modal Ligolo -->
+  <!-- Modal Ligolo -->
   <div id="ligoloModal" class="modal">
     <div class="modal-content">
       <span class="close-button" onclick="goToTools()">x</span>
       <iframe src="tools/ligolo.html" class="tool-frame"></iframe>
-    </div>
-  </div>
-
-  <!-- Modal Template -->
-  <div id="templateModal" class="modal">
-    <div class="modal-content">
-      <span class="close-button" onclick="goToTools()">x</span>
-      <iframe src="tools/template.html" class="tool-frame"></iframe>
     </div>
   </div>
 
@@ -51,10 +79,14 @@
     </div>
   </div>
 
+  <!-- NUEVO MODAL AQUÍ -->
+
+
   <script>
     function goToTools() {
-    window.location.href = "tools.html";
-}
+      window.location.href = "tools.html";
+    }
+
     function openModal(modalId) {
       document.getElementById(modalId).style.display = 'block';
     }
@@ -85,11 +117,14 @@
       }
     });
 
+    // Cierre de modal al hacer clic fuera
     window.onclick = function(event) {
-      const modal = document.getElementById('ligoloModal');
-      if (event.target == modal) {
-        modal.style.display = 'none';
-      }
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        if (event.target == modal) {
+          modal.style.display = 'none';
+        }
+      });
     }
   </script>
 </body>
